@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Universe Hub</title>
+
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+  <header>
+    <div class="mt-4 text-center">
+      <h2 class="fw-bold mb-3">AI Universe Hub</h2>
+     
+    <button id="sort-btn" onclick="sortData()" class="btn btn-danger text-white border-4 mb-5">Sort By Data</button>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="loader" class="d-none">
+      <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden ">Loading...</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-5">
+      <div id="feature-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+      </div>
+
+      <div id="see-btn" class="text-center me-4 my-4 d-none">
+        <div onclick="seeMore()" class="btn btn-danger fw-bold">See More</div>
+      </div>
+    </section>
+
+
+    <section class="p-3">
+      <!-- Modal -->
+      <div class="modal fade bg-subtle" id="hubDetailModal" tabindex="-1" aria-labelledby="hubModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="hubModalLabel"></h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="hub-details" class="modal-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="js/ai.js"></script>
+</body>
+
+</html>
